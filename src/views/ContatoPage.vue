@@ -1,20 +1,20 @@
 <template>
-    <div>
-      <h1>Entre em Contato</h1>
-      <form @submit.prevent="enviarEmail">
-        <div>
-          <label for="nome">Seu Nome:</label>
-          <input type="text" id="nome" v-model="nome" required />
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Entre em Contato</h1>
+      <form @submit.prevent="enviarEmail" class="w-50 mx-auto">
+        <div class="mb-3">
+          <label for="nome" class="form-label">Seu Nome:</label>
+          <input type="text" id="nome" class="form-control" v-model="nome" required />
         </div>
-        <div>
-          <label for="email">Seu Email:</label>
-          <input type="email" id="email" v-model="email" required />
+        <div class="mb-3">
+          <label for="email" class="form-label">Seu Email:</label>
+          <input type="email" id="email" class="form-control" v-model="email" required />
         </div>
-        <div>
-          <label for="mensagem">Mensagem:</label>
-          <textarea id="mensagem" v-model="mensagem" required></textarea>
+        <div class="mb-3">
+          <label for="mensagem" class="form-label">Mensagem:</label>
+          <textarea id="mensagem" class="form-control" rows="4" v-model="mensagem" required></textarea>
         </div>
-        <button type="submit">Enviar</button>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
       </form>
     </div>
   </template>
@@ -33,10 +33,3 @@
     alert('Formulário enviado! (Simulação)')
   }
   </script>
-  
-  <style scoped>
-  form div {
-    margin-bottom: 10px;
-  }
-  </style>
-  

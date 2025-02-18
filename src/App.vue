@@ -1,13 +1,14 @@
-<script setup lang="ts">
-const nome = 'Josué'
-</script>
-
 <template>
-    <div>
-    <h1>Fala, {{ nome }}!</h1>
-    <p>Esse é meu portfólio feito com Vue + TypeScript e Vite!</p>
+  <div>
+    <Navbar />
+    <router-view></router-view>
   </div>
 </template>
+
+<script setup lang="ts">
+import Navbar from './components/NavBar.vue'
+</script>
+
 
 <style scoped>
 .logo {
